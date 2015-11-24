@@ -33,7 +33,8 @@ $("#startButton").click(function(){
 
 //adding functionality to the colums! (.col)
 $(".col").click(function(){
-  if (player1 == ""|| player2 = "");
+  if (player1 == ""|| player2 = "");{
+    alert("please set names!")
   }// .parent() is the parent of the element. .index() indicates the position of an element.
   var row = $(this).parent().index();
   var col = $(this).index();
@@ -50,8 +51,46 @@ $(".col").click(function(){
       //This counter is for calculating ties later (you can ignore)
       moveCounter++;
       $(this).text("O");
-  }
-})
+      grid[row][row] = 1;
+      var ifWon = checkWinner(1,player1);
+      if(!ifWon){
+        //9 moves means no one won!
+        if(moveCounter >=9){
+          boardMsg("DRAW!");
+          moveCounter = 0;
+          $("#startButton").text("Play again!");
+          haveWinner = 1;
+          return;
+        } else {
+          turn = player2;
+          boardMsg(player2+ "'s turn");
+        }
+        return;
+      } else {
+        return;
+    }
+  } 
+    else if (turn == player2){
+      moveCounter ++;
+      $(this).text("X");
+      grid[row][col] = 2;
+      var ifWon = checkWinner(2,player2);
+      if (!ifWon){
+        if (moveCounter >= 9){
+          boardMsg("DRAW!");
+          moveCounter = 0 ;
+          $("#startButton").text("Play again");
+          haveWinner = 1;
+          return;
+        } else{
+          turn = player1;
+          boardMsg(player1+"'s turn now!");
+        } return;
+      } else{
+        return;
+      }
+    }
+});
 
 
 
