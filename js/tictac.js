@@ -103,7 +103,7 @@ $(".col").click(function() {
         var ifWon = winnerCheck(2, player2);
         if (!ifWon) {
             if (moveCount >= 9) {
-                boardMsg(player1 + "and" + player2 + "TIED!");
+                boardMsg(player1 + " and " + player2 + " TIED!");
                 moveCount = 0;
                 $("#playButton").text("Play again");
                 hasWinner = 1;
@@ -142,3 +142,6 @@ var winnerCheck = function(n, playerName) {
     }
     return false;
 }
+  $('.col').click( function() {
+    $(this).css('background', '#7a7f87')
+  } );
