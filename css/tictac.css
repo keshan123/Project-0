@@ -9,13 +9,19 @@ h1 {
   font-family: helvetica;
   color: black;
   position: absolute;
-  -webkit-animation: slide 5s infinite alternate linear;
+  -webkit-animation: slide 2s infinite alternate linear;
 }
 @-webkit-keyframes slide {
-    0% { left: 0; }
-    25% { left: 20%; }
-    75% { left: 60%; }
-    100% { left:75%;}
+    0% { left: 12%; }
+    25% { left: 14%; }
+    50% { left: 16%;}
+    75% { left: 18%; }
+    100% { left:20%;}
+}
+img{
+  max-width: 100px;
+  max-height: 100px;
+  position: absolute;
 }
 
 }
