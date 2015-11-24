@@ -1,5 +1,7 @@
 //preparing a function to change to board message!
-
+$( document ).ready(function() {
+    console.log( "ready!" );
+});
 var boardMsg = function (x){
   return $("#boardMessage").text(x);
 }
@@ -33,7 +35,7 @@ $("#startButton").click(function(){
 
 //adding functionality to the colums! (.col)
 $(".col").click(function(){
-  if (player1 == ""|| player2 = "");{
+  if (player1 == ""|| player2 == "");{
     alert("please set names!")
   }// .parent() is the parent of the element. .index() indicates the position of an element.
   var row = $(this).parent().index();
@@ -92,6 +94,29 @@ $(".col").click(function(){
     }
 });
 
+var checkWinner = function (num , player){
+    if(
+        //row check
+        (grid[0][0]==n && grid[0][1]==n && grid[0][2]==n) ||
+        (grid[1][0]==n && grid[1][1]==n && grid[1][2]==n) ||
+        (grid[2][0]==n && grid[2][1]==n && grid[2][2]==n) ||
+        //column check
+        (grid[0][0]==n && grid[1][0]==n && grid[2][0]==n) ||
+        (grid[0][1]==n && grid[1][1]==n && grid[2][1]==n) ||
+        (grid[0][2]==n && grid[1][2]==n && grid[2][2]==n) ||
+        //diagonal check
+        (grid[0][0]==n && grid[1][1]==n && grid[2][2]==n)||
+        (grid[0][2]==n && grid[1][1]==n && grid[2][0]==n)
+
+        ){
+      boardMsg(player+"won the game like a bawse!");
+      haveWinner = 1;
+      moveCounter = 0;
+      $('#startButton').text("Play Again!");
+      return true;
+    }
+    return false;
+}
 
 
 
