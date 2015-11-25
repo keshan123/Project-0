@@ -1,6 +1,6 @@
 
 body{
-background-image: url("http://p1.pichost.me/i/56/1797393.png");
+background-image: url("http://wallpapercave.com/wp/goKnXzJ.png");
 margin: 50px; 
 margin-right: 20px;
 }
@@ -48,8 +48,20 @@ img{
     text-align: center;
     font-size: 150px;
     font-family: helvetica;
-    color: black;
+    color: white;
     cursor: pointer;
+    -webkit-box-shadow: inset 1px 1px 85px -11px rgba(12,63,143,1);
+}
+.col:hover {
+        -webkit-box-shadow: inset 1px 1px 25px -2px rgba(0,0,0,0.75);
+        -moz-box-shadow: inset 1px 1px 25px -2px rgba(0,0,0,0.75);
+        box-shadow: inset 1px 1px 27px -2px rgba(0,0,0,0.75);
+}
+.col:active {
+        background-color: white;
+        -webkit-box-shadow: inset 1px 1px 25px -2px rgba(0,0,0,0.75);
+        -moz-box-shadow: inset 1px 1px 25px -2px rgba(0,0,0,0.75);
+        box-shadow: inset 1px 1px 25px -2px rgba(0,0,0,0.75);
 }
 .matched{
     color: maroon;
@@ -83,6 +95,6 @@ img{
 #boardDisplay{
     font-size: 30px;
     font-family: helvetica;
-    color: black;
+    color: white;
     margin-top: 10px;
 }
