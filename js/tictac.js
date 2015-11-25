@@ -142,6 +142,6 @@ var winnerCheck = function(n, playerName) {
     }
     return false;
 }
-  $('.col').click( function() {
-    $(this).css('background', '#7a7f87')
-  } );
+  // $('.col').click( function() {
+  //   $(this).css('background', '#7a7f87')
+  // } );
