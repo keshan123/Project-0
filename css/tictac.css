@@ -12,16 +12,17 @@ h1 {
   -webkit-animation: slide 2s infinite alternate linear;
 }
 @-webkit-keyframes slide {
-    0% { left: 12%; }
-    25% { left: 14%; }
-    50% { left: 16%;}
-    75% { left: 18%; }
-    100% { left:20%;}
+    0% { left: 17%; }
+    25% { left: 19%; }
+    50% { left: 21;}
+    75% { left: 23%; }
+    100% { left:25%;}
 }
 img{
   max-width: 100px;
   max-height: 100px;
   position: absolute;
+  margin-left: 50px;
 }
 
 }
@@ -50,6 +51,7 @@ img{
     font-family: helvetica;
     color: white;
     cursor: pointer;
+    text-shadow: 4px 4px 22px rgba(0, 0, 0, 0.7);
     -webkit-box-shadow: inset 1px 1px 85px -11px rgba(12,63,143,1);
 }
 .col:hover {
@@ -97,4 +99,19 @@ img{
     font-family: helvetica;
     color: white;
     margin-top: 10px;
+    text-shadow: 4px 4px 22px rgba(0, 0, 0, 0.8);
+}
+audio {
+    display: none;
+}
+button {
+    border: 1px solid rgba(255,255,128,0.4);
+    background-color: rgba(255,255,255,0.8);
+    -webkit-box-shadow: inset 1px 1px 85px -11px rgba(255,255,255,1);
+    box-shadow: inset 1px 1px 85px -11px rgba(255,255,255,1);
+    width: 80%;
+    height: 30%;
+    margin: 0.5em;
+    border-radius: 0.5em;
+    margin-left: -21px;
 }
